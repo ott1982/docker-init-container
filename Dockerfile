@@ -10,4 +10,4 @@ ADD sh/script2.sh /opt/
 
 COPY --from=init-container /opt/script1.sh /opt/script1.sh
 
-ENTRYPOINT ["sh", "-c", "/opt/script1.sh && /opt/script2.sh"]
+ENTRYPOINT ["sh", "-c", ". /opt/script1.sh && . /opt/script2.sh"]
